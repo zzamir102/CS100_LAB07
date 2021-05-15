@@ -12,9 +12,9 @@ class Rand : public Base {
 		}
 		virtual double evaluate() { return val; }
        		virtual string stringify() {
-			string str;
-			str = to_string(val);
-			return str; 
+			ostringstream ss;
+			ss << setprecision(8) << noshowpoint << val;
+			return ss.str();
 		}
    	 private:
 		double val;

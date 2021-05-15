@@ -4,4 +4,4 @@ cmake_install.cmake
 lib
 Makefile
 test
-lab
+calculator

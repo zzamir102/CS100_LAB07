@@ -10,25 +10,25 @@ using namespace std;
 class Pow : public Base {
    public:
 	Pow(Base* leftChild, Base* rightChild) : Base() {
-		leftVal = leftChild->evaluate();
-		rightVal = rightChild->evaluate();
+		leftVal = leftChild;
+		rightVal = rightChild;
 	}		
 	
 	virtual double evaluate() {
-		return(pow(leftVal, rightVal));
+		return(pow(leftVal->evaluate(), rightVal->evaluate()));
 	}
 
 	virtual string stringify() {
 		string str;
-		string left = to_string(leftVal);
-		string right = to_string(rightVal);
+		string left = leftVal->stringify();
+		string right = rightVal->stringify();
 		str = "(" + left + " ** " + right + ")";
 		return str;
 	}
 
    private:
-	double leftVal;
-	double rightVal;
+	Base* leftVal;
+	Base* rightVal;
 
 };
 
