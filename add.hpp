@@ -12,6 +12,11 @@ class Add : public Base {
 		leftVal = leftChild;
 		rightVal = rightChild;
 	}
+	
+	virtual ~Add () {
+		delete leftVal;
+		delete rightVal;
+	}
 
 	virtual double evaluate() {
 		return (leftVal->evaluate() + rightVal->evaluate());
@@ -24,7 +29,7 @@ class Add : public Base {
 		str = "(" + left + " + " + right + ")";
 		return str;
 	}
-
+	
      private:
 	Base* leftVal;
 	Base* rightVal;
