@@ -2,6 +2,9 @@
 #define __OP_HPP__
 
 #include "base.hpp"
+#include <iostream>
+#include <sstream>
+#include <iomanip>
 
 using namespace std;
 
@@ -12,9 +15,9 @@ class Op : public Base {
 	}
         virtual double evaluate() { return val; }
         virtual std::string stringify() {
-		string str;
-		str = to_string(val);
-		return str; 
+		ostringstream ss;
+		ss << setprecision(8) << noshowpoint << val;
+		return ss.str();
 	}
     private:
 	double val;

@@ -9,25 +9,25 @@ using namespace std;
 class Div : public Base {
 	public:
 		Div(Base* leftNum, Base* rightNum) : Base() { 
-			rightVal = rightNum->evaluate();
-			leftVal = leftNum->evaluate();
+			rightVal = rightNum;
+			leftVal = leftNum;
 		}
 		
 		virtual double evaluate() { 
-			return (leftVal / rightVal);
+			return (leftVal->evaluate() / rightVal->evaluate());
 		}
 		
 		virtual string stringify() { 
 			string s;
-			string left = to_string(leftVal);
-			string right = to_string(rightVal); 
+			string left = leftVal->stringify();
+			string right = rightVal->stringify(); 
 			s = "(" + left + " / " + right + ")"; 
 			return s;
 		}
 
 	private:
-		double leftVal;
-		double rightVal;
+		Base* leftVal;
+		Base* rightVal;
 };
 
 #endif
