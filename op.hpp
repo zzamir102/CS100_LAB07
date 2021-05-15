@@ -13,6 +13,7 @@ class Op : public Base {
         Op(double value) : Base() { 
 		val = value;
 	}
+	virtual ~Op() {}; 
         virtual double evaluate() { return val; }
         virtual std::string stringify() {
 		ostringstream ss;
