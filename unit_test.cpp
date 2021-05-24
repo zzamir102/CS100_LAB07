@@ -75,7 +75,7 @@ TEST(Negative_Div, Division) {
 //---------------Addition---------------------
 
 
-TEST(Base_Add, Addition) {
+TEST((Addition, Base_Add) {
 	Factory test;
 	char* args[] = {"n", "5", "+", "7"}; 
 	Base* op = test.parse(args, 4);
@@ -83,7 +83,7 @@ TEST(Base_Add, Addition) {
 	delete op;
 }
 
-TEST(Zero_Add, Addition) {
+TEST(Addition, Zero_Add) {
 	Factory test;
 	char* args[] = {"n", "0", "+", "7"}; 
 	Base* op = test.parse(args, 4);
@@ -91,7 +91,7 @@ TEST(Zero_Add, Addition) {
 	delete op;
 }
 
-TEST(Negative_Add, Addition) {
+TEST(Addition, Negative_Add) {
 	Factory test;
 	char* args[] = {"n", "5", "+", "-7"}; 
 	Base* op = test.parse(args, 4);
@@ -104,7 +104,7 @@ TEST(Negative_Add, Addition) {
 
 //---------------Subtraction------------------
 
-TEST(Base_Sub, Subtraction) {
+TEST(Subtraction, Base_Sub) {
 	Factory test;
 	char* args[] = {"n", "9", "-", "7"}; 
 	Base* op = test.parse(args, 4);
@@ -112,7 +112,7 @@ TEST(Base_Sub, Subtraction) {
 	delete op;
 }
 
-TEST(Zero_Sub, Subtraction) {
+TEST(Subtraction, Zero_Sub) {
 	Factory test;
 	char* args[] = {"n", "5", "-", "0"}; 
 	Base* op = test.parse(args, 4);
@@ -120,7 +120,7 @@ TEST(Zero_Sub, Subtraction) {
 	delete op;
 }
 
-TEST(Negative_Sub, Subtraction) {
+TEST(Subtraction, Negative_Sub) {
 	Factory test;
 	char* args[] = {"n", "5", "-", "7"}; 
 	Base* op = test.parse(args, 4);
@@ -132,7 +132,7 @@ TEST(Negative_Sub, Subtraction) {
 
 //---------------Power------------------------
 
-TEST(Base_Pow, Power) {
+TEST(Power, Base_Pow) {
 	Factory test;
 	char* args[] = {"n", "5", "**", "2"}; 
 	Base* op = test.parse(args, 4);
@@ -140,7 +140,7 @@ TEST(Base_Pow, Power) {
 	delete op;
 }
 
-TEST(Zero_Pow, Power) {
+TEST(Power, Zero_Pow) {
 	Factory test;
 	char* args[] = {"n", "2", "**", "0"}; 
 	Base* op = test.parse(args, 4);
@@ -148,7 +148,7 @@ TEST(Zero_Pow, Power) {
 	delete op;
 }
 
-TEST(Negative_Pow, Power) {
+TEST(Power, Negative_Pow) {
 	Factory test;
 	char* args[] = {"n", "-5", "**", "3"}; 
 	Base* op = test.parse(args, 4);
