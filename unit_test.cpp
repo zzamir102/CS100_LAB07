@@ -16,7 +16,7 @@ int main(int argc, char **argv) {
 
 //---------------Multiplication--------------
 
-TEST(Base_Mult, Multiplication) {
+TEST(Multiplication, Base_Mult) {
 	Factory test;
 	char* args[] = {"n","5", "*", "7"};
 	Base* op = test.parse(args, 4);
@@ -24,7 +24,7 @@ TEST(Base_Mult, Multiplication) {
 	delete op;
 }
 
-TEST(Zero_Mult, Multiplication) {
+TEST(Multiplication, Zero_Mult) {
 	Factory test;
 	char* args[] = {"n","0", "*", "7"};
 	Base* op = test.parse(args, 4);
@@ -33,7 +33,7 @@ TEST(Zero_Mult, Multiplication) {
 }
 
 
-TEST(Negative_Mult, Multiplication) {
+TEST(Multiplication, Negative_Mult) {
 	Factory test;
 	char* args[] = {"n","5", "*", "-7"};
 	Base* op = test.parse(args, 4);
@@ -46,7 +46,7 @@ TEST(Negative_Mult, Multiplication) {
 //---------------Division---------------------
 
 
-TEST(Base_Div, Division) {
+TEST(Division, Base_Div) {
 	Factory test;
 	char* args[] = {"n","4", "/", "8"};
 	Base* op = test.parse(args, 4);
@@ -54,7 +54,7 @@ TEST(Base_Div, Division) {
 	delete op;
 }
 
-TEST(Zero_Div, Division) {
+TEST(Division, Zero_Div) {
 	Factory test;
 	char* args[] = {"n","0", "/", "8"};
 	Base* op = test.parse(args, 4);
@@ -62,7 +62,7 @@ TEST(Zero_Div, Division) {
 	delete op;
 }
 
-TEST(Negative_Div, Division) {
+TEST(Division, Negative_Div) {
 	Factory test;
 	char* args[] = {"n","-4", "/", "8"};
 	Base* op = test.parse(args, 4);
@@ -75,7 +75,7 @@ TEST(Negative_Div, Division) {
 //---------------Addition---------------------
 
 
-TEST((Addition, Base_Add) {
+TEST(Addition, Base_Add) {
 	Factory test;
 	char* args[] = {"n", "5", "+", "7"}; 
 	Base* op = test.parse(args, 4);
