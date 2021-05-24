@@ -51,6 +51,7 @@ public:
 		}
 		else {
 			cout << "ERROR!" << endl;
+			delete left_op; 
 			return nullptr;
 		}
 		++i;
